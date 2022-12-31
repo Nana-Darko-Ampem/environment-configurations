@@ -12,6 +12,6 @@ export class AppComponent {
   title = environment.projectName;
   
   constructor(private configService: ConfigService){
-    console.log("Configurations", this.configService.getConfig().environment);
+    // console.log("Configurations", this.configService.getConfig().environment);
   }
 }
