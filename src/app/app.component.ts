@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from "src/environments/environment";
+import { ConfigService } from './service/config.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent {
 
   title = environment.projectName;
   
-  constructor(){
-    console.log("Environment", environment.projectName)
+  constructor(private configService: ConfigService){
+    console.log("Configurations", this.configService.getConfig().environment);
   }
 }
